@@ -1,0 +1,24 @@
+.container{:style => "padding-top: 30px"}
+  .white-card.extra-padding
+    - @games.each do |game|
+      .media
+        %a.pull-left{:href => "#"}
+          - if game.boxart.present?
+            %img.media-object{:src => "#{game.boxart.url(:thumb)}", :width => "100"}
+          - else
+            %img{:src => "http://placehold.it/100x127"}
+        .media-body
+          %h4.media-heading= game.game_title
+          - if game.platform.present?
+            Platform:
+            = game.platform 
+          - if game.developer.present?
+            %p
+              Developer:
+              = game.developer 
+          - if game.release_date.present?
+            %p
+              Release Date:
+              = game.release_date
+          = link_to "Eliminar", game_path(game),  :method => :delete, :confirm => "Seguro?"
+          = link_to "Editar", edit_game_path(game)

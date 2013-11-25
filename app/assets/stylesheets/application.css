@@ -1,0 +1,64 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+.white {
+  background: #fff;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+#file {
+  display: none;
+}
+.dummyfile input[type="text"] {
+  width: 200px;
+  display: inline;
+}
+.dummyfile a{
+  vertical-align: 0px;
+}
+.cover_hover{
+  box-shadow: 0px 0px 3px 2px yellow;
+}
+#market_city{
+  width: 315px;
+}
+.mention_image{
+  width: 20px;
+  height: 20px;
+}
+.cover{
+  min-width: 1166px;
+  width: 1166px;
+  height: 440px;
+}
+.avatar{
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  right: 0px;
+  bottom: 0px;
+  top: 67.5%;
+  left: 45px;
+}
+div#profile_cover #form{
+  display: none;
+}
+div#profile_cover:hover #form{
+  display: block;
+}
+body{
+  padding-top: 60px;
+}
+.form{
+  width: 15%;
+}

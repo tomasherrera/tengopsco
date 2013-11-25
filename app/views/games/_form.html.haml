@@ -1,0 +1,64 @@
+%section.section-wrapper.create-account-page-w
+  .container
+    .row
+      .span9
+        .white-card.extra-padding
+          = form_for @game, :html => { :multipart => true } do |f|
+            %fieldset
+              .row-fluid
+                .span12
+                  %h1.form-header Vive en Estado PLAY
+              .row
+                .span4
+                  .control-group
+                    = f.label :game_title
+                    = f.text_field :game_title, :style => "width: 300px;", :class => "span4"
+                .span4
+                  .control-group
+                    = f.label :platform
+                    = f.text_field :platform, :style => "width: 300px;", :class => "span4"
+              .row
+                .span4
+                  .control-group
+                    = f.label :release_date
+                    = f.text_field :release_date, :style => "width: 300px;", :class => "span4"
+                .span4
+                  .control-group
+                    = f.label :esrb
+                    = f.text_field :esrb, :style => "width: 300px;", :class => "span4"
+              .row
+                .span4
+                  .control-group
+                    = f.label :genre
+                    = f.text_field :genre, :style => "width: 300px;", :class => "span4"
+                .span4
+                  .control-group
+                    = f.label :players
+                    = f.text_field :players, :style => "width: 300px;", :class => "span4"
+              .row
+                .span4
+                  .control-group
+                    = f.label :youtube
+                    = f.text_field :youtube, :style => "width: 300px;", :class => "span4"
+                .span4
+                  .control-group
+                    = f.label :developer
+                    = f.text_field :developer, :style => "width: 300px;", :class => "span4"
+              .row
+                .span4
+                  .control-group
+                    = f.label :publisher
+                    = f.text_field :publisher, :style => "width: 300px;", :class => "span4"
+                .span4
+                  .control-group   
+                    = f.label :boxart
+                    = f.file_field :boxart, :style => "width: 300px;", :class => "span4" 
+              .row-fluid 
+                .span12
+                  .control-group
+                    = f.label :overview
+                    = f.text_area :overview, :rows => 5, :class => "span11"
+              .row-fluid
+                .span12
+                  .form-actions.no-margin-bottom
+                    = f.submit "Guardar", :class => "btn btn-primary btn-large"
